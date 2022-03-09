@@ -24,12 +24,10 @@ export class StudentParticularsComponent implements OnInit {
     this.getcurrentUser("currentUser")
     this.getToken("logbookToken")
     this.pass(this.token, this.id)
-  	
-
     
   }
 
-  public student_particulars: any;
+  public particulars_status: any;
   public id: any = {"student_id": ""};
 
   public particularsData = {
@@ -56,15 +54,15 @@ export class StudentParticularsComponent implements OnInit {
 
   public onSubmit(){
   	console.log(this.particularsData)
-    this.student_particulars = true;
+
   }
 
   public pass(data:any,  student_id:any){
     this.api.post("get_student_particulars?token=" + data, student_id).subscribe(
       res => {this.particulars = res, 
-        console.log(this.particulars), 
-        this.student_particulars = this.particulars.updated_particulars,
-        console.log(this.student_particulars) },
+        console.log(this.particulars[0].user_id),
+        this.particulars_status = this.particulars[0].user_id,
+        console.log(this.particulars_status) },
       err => console.log(err)
       )
 
