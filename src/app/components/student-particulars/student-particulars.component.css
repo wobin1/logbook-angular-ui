@@ -1,0 +1,16 @@
+.head{
+	height: 50px;
+	border: solid 2px green;
+}
+
+.head-div{
+	position: absolute;
+	bottom: 0px;
+}
+
+.form{
+	border-width:0px;
+	border-bottom:solid 1px;
+
+	outline:none;
+}
