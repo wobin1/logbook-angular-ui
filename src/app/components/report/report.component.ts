@@ -9,15 +9,16 @@ import { ServerRequestService } from '../../services/server-request.service';
 export class ReportComponent implements OnInit {
 
 	public token:any;
-	public file:any;
+	public file:any = "";
+	public diagram:any;
 	public reportData: any = {
-	    "user_id": "",
+	    "user_id": 2,
 	    "week_day": "",
 	    "weekending_date": "",
 	    "progress_report": "",
 	    "student_signature": "20003",
 	    "industry_supervisor_comment": "",
-	    "industry_supervisor_name": 1
+	    "industry_supervisor_name": 1,
 	}
 
   constructor(private api: ServerRequestService) {}
@@ -34,7 +35,9 @@ export class ReportComponent implements OnInit {
 
   public onSubmit(){
   	console.log(this.reportData)
-  	this.saveReport();
+  	// this.saveReport();
+  	this.uploadImage();
+  	
   }
 
   public saveReport(){
@@ -44,13 +47,15 @@ export class ReportComponent implements OnInit {
   		)
   }
 
-   public getToken(key:any){
+
+  public getToken(key:any){
     this.token = localStorage.getItem(key)
   }
 
   public getFile(event:any){
   	this.file = event.target.files[0]
   	console.log(this.file)
+
   }
 
   public uploadImage(){
@@ -58,7 +63,10 @@ export class ReportComponent implements OnInit {
 
   	formData.set('file', this.file)
 
-  	
+  	this.api.post("/progress-report?token=" + this.token, formData).subscribe(
+  			res => console.log(res),
+  			err => console.log(err)
+  		)
   }
 
 }

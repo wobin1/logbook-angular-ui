@@ -12,7 +12,9 @@ import { CodeOfConductComponent } from './components/code-of-conduct/code-of-con
 import { SiwesValedictoryActiivitiesComponent } from './components/siwes-valedictory-actiivities/siwes-valedictory-actiivities.component';
 import { PrefaceComponent } from './components/preface/preface.component';
 import { ReportComponent } from './components/report/report.component';
-import { AllReportComponent } from './components/all-report/all-report.component'
+import { AllReportComponent } from './components/all-report/all-report.component';
+import { UplodeDiagramComponent } from './components/uplode-diagram/uplode-diagram.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AllReportComponent } from './components/all-report/all-report.component
     SiwesValedictoryActiivitiesComponent,
     PrefaceComponent,
     ReportComponent,
-    AllReportComponent
+    AllReportComponent,
+    UplodeDiagramComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

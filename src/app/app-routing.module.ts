@@ -5,6 +5,9 @@ import { StudentParticularsComponent } from './components/student-particulars/st
 import { ReportComponent } from './components/report/report.component';
 import { SiwesValedictoryActiivitiesComponent } from './components/siwes-valedictory-actiivities/siwes-valedictory-actiivities.component';
 import { PrefaceComponent } from './components/preface/preface.component';
+import { UplodeDiagramComponent } from './components/uplode-diagram/uplode-diagram.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CodeOfConductComponent } from './components/code-of-conduct/code-of-conduct.component'
 
 const routes: Routes = [
 	{
@@ -26,6 +29,18 @@ const routes: Routes = [
 	{
 		path: 'siwes-valedictory-actiivities',
 		component: SiwesValedictoryActiivitiesComponent
+	},
+	{
+		path: 'uplode-diagram',
+		component: UplodeDiagramComponent
+	},
+	{
+		path: 'dashboard',
+		component: DashboardComponent
+	},
+	{
+		path: 'code-of-conduct',
+		component: CodeOfConductComponent
 	}
 ];
 
