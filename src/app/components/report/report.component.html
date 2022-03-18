@@ -1,0 +1,43 @@
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class=" mb-3">
+				<label >Day of the week</label>
+				<input [(ngModel)]="reportData.week_day" name="week_day" class="form form-control" type="text" id="formFile">
+			</div>
+			<div class=" mb-3">
+				<label >week Ending date</label>
+				<input [(ngModel)]="reportData.weekending_date" name="weekending_date" class="form form-control" type="date" id="formFile">
+			</div>
+			<div class=" mb-3">
+				<label >Work Description </label>
+				<textarea  [(ngModel)]="reportData.progress_report" name="progress-report" class="form form-control"  id="formFile"></textarea>
+			</div>
+			<div class=" mb-3">
+				<label >Student Signature</label>
+				<input [(ngModel)]="reportData.student_signature" name="student_signature" class="form form-control" type="text" id="formFile">
+			</div>
+			<div class=" mb-3">
+				<label >Supervisor Comment</label>
+				<input [(ngModel)]="reportData.industry_supervisor_comment" name="industry_supervisor_comment" class="form form-control" type="text" id="formFile">
+			</div>
+			<div class=" mb-3">
+				<label >Supervisor Name</label>
+				<input [(ngModel)]="reportData.industry_supervisor_name" name="industry_supervisor_name" class="form form-control" type="text" id="formFile">
+			</div>
+
+			<div class="mb-3">
+				<label for="">Upload diagram</label>
+				<input type="file" (change)="getFile($event)" class="form-control-file">
+			</div>
+			
+			<div class="mb-3">
+				<button class="btn btn-outline-success" (click)="onSubmit()">Submit</button>
+			</div>
+			
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+
+</div>
