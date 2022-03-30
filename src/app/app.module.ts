@@ -14,7 +14,8 @@ import { PrefaceComponent } from './components/preface/preface.component';
 import { ReportComponent } from './components/report/report.component';
 import { AllReportComponent } from './components/all-report/all-report.component';
 import { UplodeDiagramComponent } from './components/uplode-diagram/uplode-diagram.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component'
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PaymentComponent } from './components/payment/payment.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component'
     ReportComponent,
     AllReportComponent,
     UplodeDiagramComponent,
-    DashboardComponent
+    DashboardComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
