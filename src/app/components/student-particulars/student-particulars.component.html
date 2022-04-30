@@ -1,202 +1,229 @@
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		
+		<div class="card" *ngIf="particulars_status!=1">
+		  <div class="card-header">
+		    Featured
+		  </div>
+		  <div class="card-body">
+				<div class="container" >
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+							<div class=" mb-3">
+								<label >Name</label>
+								<input [(ngModel)]="particularsData.name" name="name" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Department</label>
+								<input [(ngModel)]="particularsData.department" name="department" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Registration Number</label>
+								<input [(ngModel)]="particularsData.reg_number" name="reg_number" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Course of Studies</label>
+								<input [(ngModel)]="particularsData.course_of_study" name="course_of_study" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Course Duration</label>
+								<input [(ngModel)]="particularsData.course_duration" name="course_duration" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Student GSM Phone Number</label>
+								<input [(ngModel)]="particularsData.phone_number" name="phone_number" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Parent/Guardian GSM Phone Number</label>
+								<input  [(ngModel)]="particularsData.p_g_phoneNumber" name="p_g_phoneNumber" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Acount Name</label>
+								<input  [(ngModel)]="particularsData.account_name" name="account_name" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Bank Name</label>
+								<input  [(ngModel)]="particularsData.bank_name" name="bank_name" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Bank Scort Code</label>
+								<input  [(ngModel)]="particularsData.bank_sort_code" name="bank_sort_code" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Bank Account Number</label>
+								<input  [(ngModel)]="particularsData.bank_account_no" name="bank_account_no" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Name of establishment</label>
+								<input  [(ngModel)]="particularsData.name_of_establishment" name="name_of_establishment" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Address of Establishment</label>
+								<input  [(ngModel)]="particularsData.address_of_establishment" name="address_of_establishment" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Period Of Attachment</label>
+								<input  [(ngModel)]="particularsData.period_of_attachment" name="period_of_attachment"  class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >Name of Industrial based supervisor</label>
+								<input  [(ngModel)]="particularsData.industry_supervisor_name" name="industry_supervisor_name" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >GSM Phone Number of Industrial Based Supervisor</label>
+								<input  [(ngModel)]="particularsData.industry_supervisor_phoneNumber" name="industry_supervisor_phoneNumber" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class=" mb-3">
+								<label >email Address</label>
+								<input  [(ngModel)]="particularsData.email" name="email" class="form form-control" type="text" id="formFile">
+							</div>
+							<div class="mb-3">
+								<button class="btn btn-outline-success" (click)="onSubmit()">Submit</button>
+							</div>
+							
+						</div>
+						<div class="col-md-2"></div>
+					</div>
 
-<div class="container mt-4" *ngIf="particulars_status!=1">
-	<div class="row">
-		<div class=" col-md-8 d-flex justify-content-center ">
-			<h2>Student Particulars</h2>
+				</div>
+		  </div>
 		</div>
-		<div class="col-md-4">
-			<img src="" alt="" width="150px" height="200px" class="rounded-top d-flex justify-content-end">
-		</div>
+
 	</div>
+	<div class="col-md-2"></div>
 </div>
 
-<div class="container" *ngIf="particulars_status!=1">
-	<div class="row">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
-			<div class=" mb-3">
-				<label >Name</label>
-				<input [(ngModel)]="particularsData.name" name="name" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Department</label>
-				<input [(ngModel)]="particularsData.department" name="department" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Registration Number</label>
-				<input [(ngModel)]="particularsData.reg_number" name="reg_number" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Course of Studies</label>
-				<input [(ngModel)]="particularsData.course_of_study" name="course_of_study" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Course Duration</label>
-				<input [(ngModel)]="particularsData.course_duration" name="course_duration" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Student GSM Phone Number</label>
-				<input [(ngModel)]="particularsData.phone_number" name="phone_number" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Parent/Guardian GSM Phone Number</label>
-				<input  [(ngModel)]="particularsData.p_g_phoneNumber" name="p_g_phoneNumber" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Acount Name</label>
-				<input  [(ngModel)]="particularsData.account_name" name="account_name" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Bank Name</label>
-				<input  [(ngModel)]="particularsData.bank_name" name="bank_name" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Bank Scort Code</label>
-				<input  [(ngModel)]="particularsData.bank_sort_code" name="bank_sort_code" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Bank Account Number</label>
-				<input  [(ngModel)]="particularsData.bank_account_no" name="bank_account_no" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Name of establishment</label>
-				<input  [(ngModel)]="particularsData.name_of_establishment" name="name_of_establishment" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Address of Establishment</label>
-				<input  [(ngModel)]="particularsData.address_of_establishment" name="address_of_establishment" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Period Of Attachment</label>
-				<input  [(ngModel)]="particularsData.period_of_attachment" name="period_of_attachment"  class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >Name of Industrial based supervisor</label>
-				<input  [(ngModel)]="particularsData.industry_supervisor_name" name="industry_supervisor_name" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >GSM Phone Number of Industrial Based Supervisor</label>
-				<input  [(ngModel)]="particularsData.industry_supervisor_phoneNumber" name="industry_supervisor_phoneNumber" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class=" mb-3">
-				<label >email Address</label>
-				<input  [(ngModel)]="particularsData.email" name="email" class="form form-control" type="text" id="formFile">
-			</div>
-			<div class="mb-3">
-				<button class="btn btn-outline-success" (click)="onSubmit()">Submit</button>
-			</div>
-			
-		</div>
-		<div class="col-md-2"></div>
-	</div>
 
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		
+		<div class="card">
+		  <div class="card-header">
+		    Featured
+		  </div>
+		  <div class="card-body">
+
+		  	<!-- passport and header section -->
+			<div class="container-fluid mt-4" *ngIf="particulars_status==1">
+				<div class="row">
+					<div class=" col-md-8 d-flex justify-content-center ">
+						<h2>Student Particulars</h2>
+					</div>
+					<div class="col-md-4">
+						<img src="" alt="" width="150px" height="200px" class="rounded-top d-flex justify-content-end">
+					</div>
+				</div>
+			</div>
+
+				<div class="container-fluid" *ngIf="particulars_status==1">
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-8" *ngFor="let row of particulars">
+							<div class=" mb-3" >
+								<label >Name</label>
+								<h4>{{row.name}}</h4>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Department</label>
+								<h5>{{row.department}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Registration Number</label>
+								<h5> {{row.reg_number}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Course of Studies</label>
+								<h5>{{row.course_of_study}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Course Duration</label>
+								<h5>{{row.course_duration}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Student GSM Phone Number</label>
+								<h5>{{row.phone_number}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Parent/Guardian GSM Phone Number</label>
+								<h5>{{row.p_g_phoneNumber}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Acount Name</label>
+								<h5>{{row.account_name}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Bank Name</label>
+								<h5>{{row.bank_name}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Bank Scort Code</label>
+								<h5>{{row.account_name}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Bank Account Number</label>
+								<h5>{{row.bank_account_no}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Name of establishment</label>
+								<h5>{{row.name_of_establishment}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Address of Establishment</label>
+								<h5>{{row.address_of_establishment}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Period Of Attachment</label>
+								<h5>{{row.period_of_attachment}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >Name of Industrial based supervisor</label>
+								<h5>{{row.industry_supervisor_name}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >GSM Phone Number of Industrial Based Supervisor</label>
+								<h5>{{row.industry_supervisor_phoneNumber}}</h5>
+								<hr>
+							</div>
+							<div class=" mb-3">
+								<label >email Address</label>
+								<h5>{{row.email}}</h5>
+								<hr>
+							</div>
+
+							
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+				</div>
+
+		  </div>
+		</div>
+
+	</div>
+	<div class="col-md-2"></div>
 </div>
 
 
-<div class="container mt-4" *ngIf="particulars_status==1">
-	<div class="row">
-		<div class=" col-md-8 d-flex justify-content-center ">
-			<h2>Student Particulars</h2>
-		</div>
-		<div class="col-md-4">
-			<img src="" alt="" width="150px" height="200px" class="rounded-top d-flex justify-content-end">
-		</div>
-	</div>
-</div>
 
-<div class="container" *ngIf="particulars_status==1">
-	<div class="row">
-		<div class="col-md-2"></div>
-		<div class="col-md-8" *ngFor="let row of particulars">
-			<div class=" mb-3" >
-				<label >Name</label>
-				<h4>{{row.name}}</h4>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Department</label>
-				<h5>{{row.department}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Registration Number</label>
-				<h5> {{row.reg_number}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Course of Studies</label>
-				<h5>{{row.course_of_study}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Course Duration</label>
-				<h5>{{row.course_duration}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Student GSM Phone Number</label>
-				<h5>{{row.phone_number}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Parent/Guardian GSM Phone Number</label>
-				<h5>{{row.p_g_phoneNumber}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Acount Name</label>
-				<h5>{{row.account_name}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Bank Name</label>
-				<h5>{{row.bank_name}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Bank Scort Code</label>
-				<h5>{{row.account_name}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Bank Account Number</label>
-				<h5>{{row.bank_account_no}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Name of establishment</label>
-				<h5>{{row.name_of_establishment}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Address of Establishment</label>
-				<h5>{{row.address_of_establishment}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Period Of Attachment</label>
-				<h5>{{row.period_of_attachment}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >Name of Industrial based supervisor</label>
-				<h5>{{row.industry_supervisor_name}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >GSM Phone Number of Industrial Based Supervisor</label>
-				<h5>{{row.industry_supervisor_phoneNumber}}</h5>
-				<hr>
-			</div>
-			<div class=" mb-3">
-				<label >email Address</label>
-				<h5>{{row.email}}</h5>
-				<hr>
-			</div>
 
-			
-		</div>
-		<div class="col-md-2"></div>
-	</div>
 
-</div>
+

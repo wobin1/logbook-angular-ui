@@ -1,0 +1,7 @@
+How i intend to solve the passcode problem
+
+1. after payment i will activate bolean function that will update that you have made payment
+2. i will redirect the user to a page where he will get his pass code 
+3. will also send to his email
+4. verify passcode once user enters passcode 
+5. give a username and password which he can change allow him login

@@ -26,7 +26,7 @@
     		<div class="col-md-1 mb-3"></div>
     	</div>
 
-    	<div class="row mb-5">
+    	<div class="row mb-3">
     		<div class="col-md-1"></div>
     		<div class="col-md-10">
 	    	<div class="round mt-5">
@@ -73,9 +73,9 @@
 						  <span class="input-group-text" id="addon-wrapping">Code</span>
 						  <input type="text" class="form-control" placeholder="Clearance code" aria-label="Clearance" aria-describedby="addon-wrapping">
 						</div> <br>
-				          <button class="btn btn-outline-success mr-3" type="button">Submit</button>
-
-						  <button class="btn btn-outline-danger" (click)="payment()">get clearance code</button>
+				          <button type="button" class="btn btn-outline-success" type="button">Submit</button>
+				          	&nbsp;
+						  <button type="button" class="btn btn-outline-primary " (click)="payment()">get clearance code</button>
 				        </div>
 
 						<form *ngIf="login">
@@ -115,7 +115,7 @@
 				  <div class="card-body">
 				    <h5 class="card-title">Payment</h5>
 				    <p class="card-text">Click the Button below to make payment for your access code</p>
-				    <a href={{this.paymentRespoonse.url}} class="btn btn-primary">Go somewhere</a>
+				    <a href={{this.paymentRespoonse.url}} class="btn btn-danger">Make Payment</a>
 				  </div>
 				</div>
     		</div>
